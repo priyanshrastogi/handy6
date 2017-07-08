@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>HANDY 6</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="alert alert-info text-center">Ohh yeah, HANDY 7 is coming!</div>
+        <div class="container">
+            <h1>HANDY 6</h1>
+            <p>Automated Hadoop Cluster Deployment and Data Analysis</p>
+
+            <h3>Features</h3>
+            <ul>
+                <li>Beautiful, Easy to use, Responsive User Interface</li>
+                <li>One Button Hadoop Cluster Deployment</li>
+                <li>One Button Human Resource Data Analysis with Four in-built templates:</li>
+                <ul>
+                    <li>Employee Satisfaction Analysis</li>
+                    <li>Total Number of Employees who left their jobs despite high salary</li>
+                    <li>Total Number of Employees who left their jobs due to medium salary</li>
+                    <li>Total Number of Employees who left their jobs due to low salary</li>
+                </ul>
+                <li>Add-on Utility #1: Docker Web Interface: Now Add/Delete/Start/Stop all of your docker containers with one button.</li>
+                <li>Add-on Utility #2: Automated Web Server Deployment: Deploy Web Server on any system with one button.</li>
+            </ul>
+
+            <h3>Demonstration</h3>
+            <p>User can log into the application using appropriate credentials.</p>
+            <img src="images/login.png" class="img-responsive" alt="Login Screen">
+            <p><br>Now this dashboard screen opens up. User can select any operation i.e. Setup Hadoop/Hadoop2, See Cluster Status, Manage Docker Containers, Setup Web Server etc.</p>
+            <img src="images/dashboard.png" class="img-responsive" alt="Dashboard Screen">
+            <p><br>If user selects 'Setup Hadoop', this screen opens up. Now there are two options to setup hadoop cluster. Manual and On-demand.
+            In Manual, after entering number of datanodes, user will be asked IP addresses of namenode, jobtracker, client and all datanodes. Now this application will automatically install and
+            setup hadoop on all the systems. In On-demand, user don't need to enter IP addresses of any server. This application will make docker containers for namenode, jobtracker, client,
+            and all of the datanodes and configure hadoop in them.</p>
+            <img src="images/hadoop.png" class="img-responsive" alt="Config Hadoop Screen">
+            <p><br>When hadoop cluster setup is done, this screen opens up and shows Namspace ID of your hadoop cluster.</p>
+            <img src="images/success.png" class="img-responsive" alt="Success Screen">
+            <p><br>In this page, User can upload datasets and select the operation, user wants to perform on the dataset. If user wants to do employee satisfaction analysis (s)he can select the operation in the dropdown.
+            Currently, there are four operations, as mentioned above in features. Here we have selected employee satisfaction analysis. This hrdata.csv file contains
+            satisfaction score, salary type, experience, number of projects, job data of 14999 employees.</p>
+            <img src="images/upload.png" class="img-responsive" alt="Upload and Analyse Screen">
+            <p><br>When analysis is done in MapReduce, Aplication fatches results from Hadoop File System and shows it right in the browser.</p>
+            <img src="images/data-success.png" class="img-responsive" alt="Data Success Screen">
+            <p><br>Add-on Utility #1: Manage Docker Containers page, User can manage all the docker containers running on server, User can add, delete, start, stop containers right from the browser.</p>
+            <img src="images/docker.png" class="img-responsive" alt="Manage Docker Screen">
+            <p><br>Add-on Utility #2: Enter IP address and password of a system and make it a webserver. HANDY 6 automatically installs and configures httpd server on the system.</p>
+            <img src="images/webserver.png" class="img-responsive" alt="Webserver Screen">
+
+            <h3>Technologies Used</h3>
+            <ul>
+                <li><span class="tech">Bootstrap and Javascript:</span> For Responsive UI</li>
+                <li><span class="tech">Ansible:</span> To automate tasks such as Install softwares, copy files from webserver to remote servers, and running commands on remote servers</li>
+                <li><span class="tech">Docker:</span> To run hadoop cluster in one system</li>
+                <li><span class="tech">Hadoop:</span> To handle and anlyse large datasets</li>
+                <li><span class="tech">Python:</span>To connect everything and Mapper, Reducer programs</li>
+                <li><span class="tech">Splunk:</span> For log management.</li>
+            </ul>
+
+            <h3>Target Audience</h3>
+            <p>Human Resource Managers of an enterprise. This application is easy to use, HR Managers can upload and analyse huge datasets.</p>
+
+            <h3 class="text-center">Made with &hearts; by Invasive Analysts</h3>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 team">
+                    <p>Priyansh Rastogi<br>
+                    Shiv Nadar University, Greater Noida<br>
+                    Class of 2019</p>
+                </div>
+                <div class="col-md-4 col-sm-12 team">
+                    <p>Riya Phophalia<br>
+                    MBM Engineering College, Jodhpur<br>
+                    Class of 2018</p>
+                </div>
+                <div class="col-md-4 col-sm-12 team">
+                    <p>Mayank Kumar<br>
+                    JIET, Jodhpur<br>
+                    Class of 2018</p>
+                </div>
+                <div class="col-md-4 col-sm-12 team">
+                    <p>Chanderpal Singh<br>
+                    GEC, Bikaner<br>
+                    Class of 2018</p>
+                </div>
+                <div class="col-md-4 col-sm-12 team">
+                    <p>Bhavesh Prajapati<br>
+                    SRM University, Chennai<br>
+                    Class of 2019</p>
+                </div>
+                <div class="col-md-4 col-sm-12 team">
+                    <p>Rahul Gupta<br>
+                    JECRC, Jaipur<br>
+                    Class of 2018</p>
+                </div>
+            </div>
+
+            <h3>HANDY 7 is coming!</h3>
+            <ul>
+                <li>Almost 2 times faster deployment of Hadoop Cluster than HANDY 6</li>
+                <li>Enhanced Security with use of Django</li>
+                <li>Option to upload custom mapper and reducer programs so that user can analyse any type of data, which changes the target audience of this application to everyone who want to analyse huge data</li>
+                <li>Extra templates</li>
+                <li>Support for Mapper and Reducer programs written in R and Java</li>
+                <li>Support for Machine Learning tools like Apache Mahout</li>
+                <li>And Much More</li>
+            <p class="copyright">&copy; Priyansh Rastogi, 2017</p>
+        </div>
+    </body>
+
+</html>

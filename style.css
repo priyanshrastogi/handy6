@@ -1,0 +1,24 @@
+body {
+    background-color: #F8F6F6;
+}
+
+h3 {
+    color: #CF4647;
+}
+
+p {
+    color: #2A363B;
+}
+
+.tech {
+    color: #CF4647;
+}
+
+.team {
+    text-align: center;
+}
+
+.copyright {
+    margin-top: 50px;
+    text-align: center;
+}
