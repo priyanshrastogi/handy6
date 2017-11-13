@@ -1,0 +1,13 @@
+---
+- hosts: client
+  tasks:
+      - name: copying file to client
+        copy:
+            src: /webcontent/scripts/uploads/hrdata.csv
+            dest: /root/
+
+      - name: making result file
+        command: "touch result.txt"
+
+      - name: making total file
+        command: "touch total.txt"

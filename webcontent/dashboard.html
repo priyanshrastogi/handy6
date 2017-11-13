@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Project</title>
+
+        <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class=" project-title">
+            <h1>HANDY 6</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 button-panel">
+                    <button class="btn btn-primary" onclick="newtab('hadoop.html');">Setup Hadoop</button>
+                </div>
+
+                <div class="col-md-4 col-sm-12 button-panel">
+                    <button class="btn btn-primary">Setup Hadoop 2</button>
+                </div>
+
+                <div class="col-md-4 col-sm-12 button-panel">
+                    <button class="btn btn-primary" onclick="newtab('scripts/cluster-status.py');">Cluster Status</button>
+                </div>
+
+                <div class="col-md-4 col-sm-12 button-panel">
+                    <button class="btn btn-primary" onclick="newtab('webserver.html');">Setup Web Server</button>
+                </div>
+
+                <div class="col-md-4 col-sm-12 button-panel">
+                    <button class="btn btn-primary" onclick="newtab('scripts/docker.py');">Manage Docker Containers</button>
+                </div>
+
+                <div class="col-md-4 col-sm-12 button-panel">
+                    <button class="btn btn-primary" onclick="newtab('scripts/onlineshell.py')">Online Bash</button>
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">&copy; Invasive Analysts, 2017</p>
+        <script>
+            function newtab(url) {
+                window.open(url,' _blank');
+            }
+        </script>
+    </body>
+
+</html>

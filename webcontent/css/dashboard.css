@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    color : white;
+}
+
+.project-title {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ff5733;
+}
+
+.button-panel {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.copyright {
+    margin-top: 50px;
+    text-align: center;
+}

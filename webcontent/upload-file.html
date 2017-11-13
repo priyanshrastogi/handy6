@@ -1,0 +1,44 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Project</title>
+
+    <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class=" project-title">
+            <h1>HR ANALYSIS WITH HANDY 6</h1>
+        </div>
+        <div class="col-md-4 col-md-offset-4 col-sm-12 custom-panel">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Upload and Analyse Dataset</h3>
+                </div>
+                <div class="panel-body center-div">
+                    <form enctype="multipart/form-data" action="scripts/analyse.py" method="post">
+                        <div class="input-group form-input-custom">
+                            <span class="input-group-addon">Select File</span>
+                            <input type="file" class="form-control" name="infile">
+                        </div>
+                        <div class="input-group form-input-custom">
+                            <span class="input-group-addon">Select Operation</span>
+                            <select class="form-control" name="opt">
+                                <option value="sat">Employee Satisfaction</option>
+                                <option value="lefthigh">Left Job/High Salary</option>
+                                <option value="leftmed">Left Job/Medium Salary</option>
+                                <option value="leftlow">Left Job/Low Salary</option>
+                            </select>
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="Analyse">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">&copy; Invasive Analysts, 2017</p>
+</body>

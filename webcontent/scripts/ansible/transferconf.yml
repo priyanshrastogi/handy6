@@ -1,0 +1,15 @@
+---
+- hosts: all
+  tasks:
+      - name: Transfering conf file
+        copy:
+            src: /root/app_files/myapp.conf
+            dest: /etc/httpd/conf.d
+            force: yes
+
+      - name: disabling setenforce
+        command: "setenforce 0"
+
+      - name: restarting httpd
+        service: "httpd"
+        state: restarted

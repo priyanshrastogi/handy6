@@ -1,0 +1,21 @@
+---
+- hosts: all
+  tasks:
+      - name: Transfering Jdk
+        copy:
+            src: "/root/jdk-7u79-linux-x64.rpm"
+            dest: "/root/"
+
+      - name: Transfering Hadoop
+        copy:
+            src: "/root/hadoop-1.2.1-1.x86_64.rpm"
+            dest: "/root/"
+
+      - name: Installing Jdk
+        command: "rpm --install jdk-7u79-linux-x64.rpm"
+
+      - name: Setting up env vars
+        shell: printf '\nexport JAVA_HOME=/usr/java/jdk1.7.0_79/\nexport PATH=/usr/java/jdk1.7.0_79/bin:$PATH' >> /root/.bashrc
+
+      - name: Installing Hadoop
+        command: "rpm --install hadoop-1.2.1-1.x86_64.rpm --replacefiles"

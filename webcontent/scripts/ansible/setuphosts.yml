@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+      - name: transfering hosts file
+        copy:
+            src: /root/app_files/hosts.txt
+            dest: /root/hosts.txt
+
+      - name: editing hosts file
+        shell: cat hosts.txt >> /etc/hosts

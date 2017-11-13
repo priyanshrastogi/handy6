@@ -1,0 +1,20 @@
+---
+- hosts: namenode
+  tasks:
+      - name: starting namenode
+        command: "hadoop-daemon.sh start namenode"
+
+- hosts: datanode
+  tasks:
+      - name: starting datanode
+        command: "hadoop-daemon.sh start datanode"
+
+- hosts: jobtracker
+  tasks:
+      - name: starting jobtracker
+        command: "hadoop-daemon.sh start jobtracker"
+
+- hosts: datanode
+  tasks:
+      - name: starting tasktracker
+        command: "hadoop-daemon.sh start tasktracker"

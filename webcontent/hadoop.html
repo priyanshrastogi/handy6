@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Project</title>
+
+        <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/hadoop.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class=" project-title">
+            <h1>HANDY 6</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 custom-panel">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Configure Hadoop Manually</h3>
+                        </div>
+                        <div class="panel-body center-div">
+                            <form action="scripts/hadoop-ip-addr.py">
+                                <div class="input-group form-input-custom">
+                                    <span class="input-group-addon">Number of Data Nodes</span>
+                                    <input type="text" class="form-control" placeholder="Please Enter" name="numdn">
+                                </div>
+                                <input class="btn btn-primary" type="submit" value="Next">
+                            </form>
+                            <p class="note">In this method, You need to enter IP address of namnode,
+                                jobtracker, all datanodes, and client. System will automatically setup hadoop cluster for you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 custom-panel">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Configure Hadoop On-demand</h3>
+                        </div>
+                        <div class="panel-body center-div">
+                            <form action="scripts/hadoop-auto.py">
+                                <div class="input-group form-input-custom">
+                                    <span class="input-group-addon">Number of Data Nodes</span>
+                                    <input type="text" class="form-control" placeholder="Please Enter" name="numdatanode">
+                                </div>
+                                <input class="btn btn-primary" type="submit" value="Configure">
+                            </form>
+                            <p class="note">In this method, You don't need to enter any IP address, System will automatically setup
+                                 servers and configure hadoop in them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">&copy; Invasive Analysts, 2017</p>
+    </body>
+</html>

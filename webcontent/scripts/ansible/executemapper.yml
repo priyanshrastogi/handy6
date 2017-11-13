@@ -1,0 +1,20 @@
+---
+- hosts: client
+  tasks:
+      - name: making it executable
+        command: "chmod +x /root/maphigh.py"
+
+      - name: making it executable
+        command: "chmod +x /root/mapmed.py"
+
+      - name: making it executable
+        command: "chmod +x /root/maplow.py"
+
+      - name: making it executable
+        command: "chmod +x /root/mapsat.py"
+
+      - name: making it executable
+        command: "chmod +x /root/reducer.py"
+
+      - name: making it executable
+        command: "chmod +x /root/reducersat.py"

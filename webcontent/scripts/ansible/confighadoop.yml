@@ -1,0 +1,107 @@
+---
+- hosts: namenode
+  tasks:
+      - name: configuring namenode
+        copy:
+            src: /root/app_files/core-site.xml
+            dest: /etc/hadoop/
+            force: yes
+
+      - name: configuring namenode
+        copy:
+            src: /root/app_files/namenode/hdfs-site.xml
+            dest: /etc/hadoop/
+            force: yes
+
+      - name: making folder for namenode
+        file:
+            path: /name
+            state: directory
+
+      - name: format namenode folder
+        command: "hadoop namenode -format"
+
+- hosts: datanode
+  tasks:
+      - name: configuring datanode
+        copy:
+            src: /root/app_files/core-site.xml
+            dest: /etc/hadoop/
+            force: yes
+
+      - name: configuring datanode
+        copy:
+            src: /root/app_files/datanode/hdfs-site.xml
+            dest: /etc/hadoop/
+            force: yes
+
+      - name: making folder for datanode
+        file:
+            path: /data
+            state: directory
+
+- hosts: jobtracker
+  tasks:
+      - name: configuring jobtracker
+        copy:
+            src: /root/app_files/mapred-site.xml
+            dest: /etc/hadoop/mapred-site.xml
+            force: yes
+
+      - name: configuring jobtracker
+        copy:
+            src: /root/app_files/core-site.xml
+            dest: /etc/hadoop/core-site.xml
+            force: yes
+
+- hosts: datanode
+  tasks:
+      - name: configuring tasktracker
+        copy:
+            src: /root/app_files/mapred-site.xml
+            dest: /etc/hadoop/
+            force: yes
+
+- hosts: client
+  tasks:
+      - name: configuring client
+        copy:
+            src: /root/app_files/core-site.xml
+            dest: /etc/hadoop/
+            force: yes
+
+      - name: configuring client
+        copy:
+            src: /root/app_files/mapred-site.xml
+            dest: /etc/hadoop/
+            force: yes
+
+      - name: transfering mappers
+        copy:
+            src: /root/app_files/maphigh.py
+            dest: /root/
+
+      - name: transfering mappers
+        copy:
+            src: /root/app_files/mapmed.py
+            dest: /root/
+
+      - name: transfering mappers
+        copy:
+            src: /root/app_files/maplow.py
+            dest: /root/
+
+      - name: transfering mappers
+        copy:
+            src: /root/app_files/mapsat.py
+            dest: /root/
+
+      - name: transfering reducer
+        copy:
+            src: /root/app_files/reducer.py
+            dest: /root/
+
+      - name: transfering reducer
+        copy:
+            src: /root/app_files/reducersat.py
+            dest: /root/
